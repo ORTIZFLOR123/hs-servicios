@@ -1,0 +1,147 @@
+
+:root{
+  --card:#111827;
+  --muted:#94a3b8;
+  --primary:#22c55e;
+  --text:#e5e7eb;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto;
+  background:#020617;
+  color:var(--text);
+}
+
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+.container{max-width:1100px;margin:auto;padding:24px}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(8px);
+  background:rgba(2,6,23,.85);
+  border-bottom:1px solid #1f2937;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  font-weight:700;
+  letter-spacing:.5px;
+}
+
+.menu{
+  display:flex;
+  gap:16px;
+}
+
+.menu a:hover{
+  color:var(--primary);
+}
+
+section{
+  padding:28px 0;
+  scroll-margin-top:100px;
+}
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  align-items:center;
+  min-height:calc(100vh - 120px);
+}
+
+.hero h1{
+  font-size:clamp(28px,4vw,44px);
+  margin:0 0 12px;
+}
+
+.hero p{
+  color:var(--muted);
+  max-width:680px;
+}
+
+.cta{
+  display:inline-block;
+  margin-top:16px;
+  padding:12px 18px;
+  background:var(--primary);
+  color:#022c22;
+  border-radius:12px;
+  font-weight:600;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:16px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid #1f2937;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.card .p{
+  padding:14px;
+}
+
+.card p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.trabajo{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.trabajo img{
+  border-radius:12px;
+}
+
+.about{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:20px;
+}
+
+.contact{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.box{
+  background:var(--card);
+  border:1px solid #1f2937;
+  border-radius:18px;
+  padding:16px;
+}
+
+footer{
+  border-top:1px solid #1f2937;
+  color:var(--muted);
+}
+
+@media (max-width:768px){
+  .menu{display:none}
+  .hero,.about,.contact,.trabajo{
+    grid-template-columns:1fr;
+  }
+}
